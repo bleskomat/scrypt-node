@@ -1,7 +1,7 @@
 const assert = require('assert');
 const { compare, deserializeHash, generateSalt, hash } = require('../../../');
 
-describe('hash(secret, salt, keylen[, options])', function() {
+describe('hash(secret, salt[, keylen[, options]])', function() {
 
 	it('returns a promise that resolves with the serialized hash of the given secret', function() {
 		const secret = 'test';
