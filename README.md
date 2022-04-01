@@ -45,7 +45,7 @@ Check if a secret matches a hash:
 const scrypt = require('@bleskomat/scrypt');
 const secret = 'super secret password';
 const hash = '$scrypt$1$14$iAoNah2WdPs7s2JZTd0Velb6ycQ=$ttq2cz7NoXNkAs6Nbl+TNKZsYFaEQJFcIWNTApiV67k=';
-scrypt.compare(secret, result).then(result => {
+scrypt.compare(secret, hash).then(result => {
 	console.log(result ? 'OK' : 'DOES NOT MATCH');
 });
 ```
@@ -70,7 +70,7 @@ Synchronously check if a secret matches a hash:
 const scrypt = require('@bleskomat/scrypt');
 const secret = 'super secret password';
 const hash = '$scrypt$1$14$iAoNah2WdPs7s2JZTd0Velb6ycQ=$ttq2cz7NoXNkAs6Nbl+TNKZsYFaEQJFcIWNTApiV67k=';
-const result = scrypt.compareSync(secret, result);
+const result = scrypt.compareSync(secret, hash);
 console.log(result ? 'OK' : 'DOES NOT MATCH');
 ```
 
