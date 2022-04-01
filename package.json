@@ -1,0 +1,34 @@
+{
+  "name": "@bleskomat/scrypt",
+  "version": "1.0.0",
+  "description": "Node.js module that provides a wrapper API to node's built-in scrypt implementation.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run test:unit",
+    "test:unit": "./node_modules/.bin/mocha --recursive ./test/unit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bleskomat/scrypt-node.git"
+  },
+  "keywords": [
+    "scrypt"
+  ],
+  "author": {
+    "name": "Charles Hill",
+    "email": "chill@degreesofzero.com"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bleskomat/scrypt-node/issues"
+  },
+  "homepage": "https://github.com/bleskomat/scrypt-node#readme",
+  "devDependencies": {
+    "mocha": "9.2.2"
+  }
+}
