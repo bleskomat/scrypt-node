@@ -4,16 +4,17 @@
 
 Node.js module that provides a wrapper API to node's built-in [scrypt](https://nodejs.org/api/crypto.html#cryptoscryptpassword-salt-keylen-options-callback) implementation.
 
-Why not just use the built-in scrypt of Node.js? You could, but it's nice to have a portable serialization format that can be stored in a database or configuration file long-term without worrying about incompatibility when changing hashing options.
-
-If you're trying to decide between using scrypt and bcrypt, you might find [this stackexchange Q&A](https://security.stackexchange.com/questions/26245/is-bcrypt-better-than-scrypt) worth a read.
+Why not just use the built-in scrypt of Node.js? You could, but it's nice to have a portable serialization format that can be stored in a database or configuration file long-term without worrying about incompatibility when changing hashing options. An example of the serialization format used by this module:
+```
+$scrypt$1$14$iAoNah2WdPs7s2JZTd0Velb6ycQ=$ttq2cz7NoXNkAs6Nbl+TNKZsYFaEQJFcIWNTApiV67k=
+```
+`$scrypt$` is the prefix and the `$` symbol is used as a delimiter. The first value is the serialization format version - in this case `1`. The second value is the cost exponent - in this case `14` meaning the cost is equal to 2^14 or 16384. The third value is the base64-encoded salt. And the fourth value is the base64-encoded derived key.
 
 * [Installation](#installation)
 * [Usage](#usage)
 * [Tests](#tests)
 * [Changelog](#changelog)
 * [License](#license)
-
 
 ## Installation
 
